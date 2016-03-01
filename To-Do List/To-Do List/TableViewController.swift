@@ -125,6 +125,7 @@ class TableViewController: UITableViewController {
         
         var svc = segue!.destinationViewController as? StatViewController
         svc?.numberOfCompletedTasks = validItem
+        svc?.totalNumberOfTasks = self.toDoListItems.count
     }
 
 

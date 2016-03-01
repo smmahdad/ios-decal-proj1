@@ -17,7 +17,7 @@ class ToDoListItem {
         let twentyFourHours = 60 * 60 * 24.0
         self.text = text
         self.checked = false
-        self.date = NSDate()//NSDate(timeInterval: -twentyFourHours + 10, sinceDate: paramDate!)
+        self.date = NSDate()
     }
     
     func hasValidDate() -> Bool {
