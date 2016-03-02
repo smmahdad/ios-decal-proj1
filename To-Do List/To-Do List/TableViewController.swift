@@ -72,6 +72,9 @@ class TableViewController: UITableViewController {
         let item = toDoListItems[indexPath.row]
         
         item.checked = !item.checked
+        if item.checked {
+            item.updateDate()
+        }
         decideCheckmark(cell, index: indexPath.row)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
@@ -112,11 +115,9 @@ class TableViewController: UITableViewController {
         var tempList = [ToDoListItem]()
         var currRow = 0
         for item in toDoListItems {
-            if item.hasValidDate() {
+            if item.hasValidDate() || !item.checked {
                 tempList.append(item)
-                if item.checked {
-                    validItem += 1
-                }
+                validItem += 1
             }
             currRow += 1
         }

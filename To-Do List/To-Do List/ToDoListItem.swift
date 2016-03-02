@@ -30,4 +30,8 @@ class ToDoListItem {
         let check = idk.rawValue
         return check <= 0
     }
+    
+    func updateDate() {
+        self.date = NSDate()
+    }
 }
