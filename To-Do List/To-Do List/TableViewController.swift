@@ -117,7 +117,9 @@ class TableViewController: UITableViewController {
         for item in toDoListItems {
             if item.hasValidDate() || !item.checked {
                 tempList.append(item)
-                validItem += 1
+                if item.checked {
+                    validItem += 1
+                }
             }
             currRow += 1
         }
